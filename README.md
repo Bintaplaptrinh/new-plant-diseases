@@ -96,10 +96,12 @@ All three models achieved impressive performance on the Validation set:
 Testing on the Test set showed 100% prediction accuracy on the examined samples.
 
 ## Future Work
-* Apply more realistic data augmentation (motion blur, perspective distortion, occlusion)
+1. Enhance description:
+ * RandomResizedCrop (simulate zoom/crop leaf)
+ * Gaussian blur / light motion blur (simulate hand shake)
+ * RandomPerspective / affine (simulate shooting angle)
+ * RandomErasing/Cutout (simulate leaf being covered, shadow, hole)
+ * Aug according to “real light”: change gamma, white balance
+2. Test with dataset collected in reality by old phone, low quality camera (farmers usually only use smartphone without too good camera)
+3. Design, optimize model for inference oriented to develop for mobile application
 
-* Test models on images captured by low-quality smartphone cameras
-
-* Optimize inference speed and memory usage for mobile deployment
-
-* Develop a practical disease diagnosis support application for agriculture
