@@ -8,7 +8,7 @@
 
 ## Thành Viên Nhóm (Team Members)
 
-| STT | Họ và Tên | Mã Sinh Viên (Student ID) |
+| STT | Họ và Tên (Full name) | Mã số sinh viên (Student ID) |
 |:---:|:---|:---|
 | 1 | **Đoàn Anh Vũ** | 2351267280 |
 | 2 | **Nguyễn Hữu Tuấn Phát** | 2351267274 |
@@ -51,13 +51,16 @@ Thử nghiệm trên tập Test cho thấy các mô hình dự đoán chính xá
 
 ## Hướng Phát Triển
 
-* Tăng cường Data Augmentation sát điều kiện thực tế (ánh sáng, rung, che khuất)
-
-* Kiểm thử với ảnh chụp từ điện thoại, camera chất lượng thấp
-
-* Tối ưu mô hình cho inference trên thiết bị di động
-
-* Phát triển thành ứng dụng hỗ trợ chẩn đoán bệnh cây trồng
+1. Tăng cường mô ta:
+  * RandomResizedCrop (mô phỏng zoom/cắt lá)
+  * Gaussian blur / motion blur nhẹ (mô phỏng rung tay)
+  * RandomPerspective / affine (mô phỏng góc chụp)
+  * RandomErasing/Cutout (mô phỏng lá bị che, bóng, lỗ sâu)
+  * Augtheo“ánh sáng thưc”: thay đổi gamma, white balance
+2. Test vơi tập dữ liêu được thu thập thưc tế bằng điên thoại cũ, camera không chất
+lượng (nông dân thường chỉ dùng smartphone không có camera quá tốt)
+3. Thiết kế, tối ưu mô hình cho inference hương tơi phát triển cho ứng dụng di
+động
 ---
 
 ## Introduction
